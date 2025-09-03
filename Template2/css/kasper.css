@@ -1,0 +1,149 @@
+/* Start Variables */
+:root{
+--main-color: #19c8fa;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+}
+
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small Screen Styles */
+@media (max-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media(min-width: 992) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+/*Start Header*/
+header{
+
+ }
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+ }
+ header .container::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #a2a2a2;
+    bottom: 0;
+    width: calc(100% - 30px);
+    left: 15px;
+ }
+ .ghost-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    gap: 5px; /* Space between icon and text */
+ }  
+ .logo-text{
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ }
+ .logo-text p{
+    font-style: italic;
+    font-family: 'Story Script', cursive;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    color: var(--main-color);
+    align-items: end;
+ }
+ .logo-text h1{
+  font-weight: bold;
+   display: inline-block;
+   font-family: 'Story Script', cursive;
+    margin: 0;
+    color: white;
+ }
+ .ghost-icon {
+    color: var(--main-color);
+    font-size: 40px;
+    margin: -5px;
+    padding: 0;
+}
+header nav{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+header nav ul{
+  display: flex;
+
+  
+}
+header nav ul li a{
+  display: block;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  padding: 40px 10px;
+  position: relative;
+  z-index: 2;
+}
+header nav ul li a.active,
+header nav ul li a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+header nav .form{
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  border-left: 1px solid white;
+}
+header nav .form i{
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+ /* End Header */
