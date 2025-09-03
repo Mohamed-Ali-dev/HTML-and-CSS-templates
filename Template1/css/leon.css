@@ -1,5 +1,5 @@
 /* Start Global Rules */
-:root{
+:root {
   --main-color: #10cab7;
 }
 * {
@@ -37,12 +37,36 @@ body {
   }
 }
 /* End Global Rules */
+/* Start Components */
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+  }
+}
+/* End Components*/
 
 /* Start Header */
 .header {
-  padding: 20px ;
+  padding: 20px;
 }
-.header .container{
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,32 +76,30 @@ body {
 }
 .header .links {
   position: relative;
-
 }
 .header .links:hover .icon span:nth-child(2) {
   width: 100%;
-
 }
-.header .links .icon{
+.header .links .icon {
   width: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
-.header .links .icon span{
+.header .links .icon span {
   background-color: #333;
   margin-bottom: 5px;
   height: 2px;
 }
-.header .links .icon span:first-child{
- width: 100%;
+.header .links .icon span:first-child {
+  width: 100%;
 }
-.header .links .icon span:nth-child(2){
- width: 60%;
- transition: width 0.3s ease-in-out;
+.header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: width 0.3s ease-in-out;
 }
-.header .links .icon span:last-child{
- width: 100%;
+.header .links .icon span:last-child {
+  width: 100%;
 }
 .header .links uL {
   list-style: none;
@@ -88,7 +110,7 @@ body {
   right: 0;
   min-width: 200px;
   top: calc(100% + 15px);
-   opacity: 0;
+  opacity: 0;
   transform: translatex(20px);
   pointer-events: none;
   transition: opacity 0.3s, transform 0.3s;
@@ -99,43 +121,42 @@ body {
   opacity: 1;
   transform: translatex(0);
   pointer-events: auto;
-
 }
 .header .links uL::before {
- content: "";
- border-width: 10px;
- border-style: solid;
- border-color: transparent transparent #f6f6f6 transparent;
- position: absolute;
- right: 5px;
- top: -20px;
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
 }
 .header .links li {
   margin-left: 20px;
 }
 .header .links ul li a {
-  display:block;
+  display: block;
   padding: 15px;
   text-decoration: none;
   color: #333;
   transition: 0.3s;
 }
 .header .links ul li a:hover {
- padding-left: 25px;
+  padding-left: 25px;
 }
 .header .links ul li:not(:last-child) a {
-  border-bottom:1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 /* End Header */
 
- /* Start Landing  */
- .landing{
+/* Start Landing  */
+.landing {
   background-image: url("../images/landing.jpg");
   background-size: cover;
   height: calc(100vh - 64px);
   position: relative;
- }
-.landing .intro-text{
+}
+.landing .intro-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -143,51 +164,57 @@ body {
   text-align: center;
   width: 320px;
   max-width: 100%;
- }
-  .landing .intro-text h1{
+}
+.landing .intro-text h1 {
   margin: 0;
   font-weight: bold;
   font-size: 50px;
   color: var(--main-color);
- }
-   .landing .intro-text p{
-    font-size: 19px;
-    line-height: 1.8;
- }
- /* End Landing  */
- /* Start Features  */
- .features {
+}
+.landing .intro-text p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+/* End Landing  */
+/* Start Features  */
+.features {
   padding: 60px 0;
   background-color: #f6f6f6;
- }
- .features .container {
+}
+.features .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
- }
- .features .feat {
+}
+.features .feat {
   text-align: center;
   padding: 20px;
   border: 1px solid #eee;
   border-radius: 5px;
   transition: 0.3s;
- }
- .features .feat:hover {
+}
+.features .feat:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
- }
- .features .feat i {
+}
+.features .feat i {
   color: var(--main-color);
   margin-bottom: 15px;
- }
- .features .feat h3 {
+}
+.features .feat h3 {
   font-weight: 800;
   margin: 30px 0;
   font-size: 22px;
- }
- .features .feat p {
+}
+.features .feat p {
   font-size: 14px;
   line-height: 1.8;
   color: #777;
- }
- /* End Features  */
+}
+/* End Features  */
+/* Start services*/
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+/* End services  */
